@@ -1,70 +1,23 @@
-# Blockchain + Simple Anomaly Detection Prototype
+Blockchain + Anomaly Detection
 
-Minimal Python prototype that shows:
+Python project that shows:
+- a simple blockchain-style hash chain using SHA-256 for data integrity
+- basic anomaly detection on blocks (z-scores + fixed security rules)
 
-- how a **blockchain-style hash chain** (using SHA-256) provides **tamper-evident data integrity**;
-- how simple **anomaly detection** (z-scores) and **rule-based security checks** can flag suspicious blocks.
+Summary
+The scritp builds a small blockchain in memory
+generates normal and anomalous blocks
+prints block features, anomaly detector output, and rule-based violations
+finally checks that the chain is still valid
 
+Files
+models.py – Transaction, Block
+blockchain.py – Blockchain + integrity check
+anomaly.py – AnomalyDetector + RuleBasedSecurityChecker
+experiment.py – Synthetic blocks and detection logic
+main.py – Runs the experiment
 
----
-
-## Structure
-
-```text
-.
-├─ models.py      # Transaction, Block
-├─ blockchain.py  # Blockchain + is_chain_valid()
-├─ anomaly.py     # AnomalyDetector (z-score) + RuleBasedSecurityChecker
-├─ experiment.py  # Synthetic data + experiment driver
-└─ main.py        # Entry point
-
-				
-            
 Requirements
 Python 3.9+
-Only standard library modules.
-Optional venv:
+Only Python standard library modules
 
-bash
-
-
-                
-					
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# Linux/macOS: source .venv/bin/activate
-
-				
-            
-Run
-bash
-
-
-                
-					
-python main.py
-
-				
-            
-For each block you will see:
-
-synthetic label: normal / anomalous
-features: num_txs, total_amount, max_amount, time_delta
-statistical detector output (z-scores, is_anomaly)
-rule-based checker output (rule_alert, violations)
-At the end:
-
-text
-
-
-                
-					
-Final chain validity: True
-
-				
-            
-if the hash chain is still valid.
-
-
-
-                
