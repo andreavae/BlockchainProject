@@ -5,7 +5,6 @@ Minimal Python prototype that shows:
 - how a **blockchain-style hash chain** (using SHA-256) provides **tamper-evident data integrity**;
 - how simple **anomaly detection** (z-scores) and **rule-based security checks** can flag suspicious blocks.
 
-Developed for a **Cryptography and Security** course.
 
 ---
 
@@ -66,11 +65,6 @@ Final chain validity: True
             
 if the hash chain is still valid.
 
-What this is for
-Project for combining:
-
-cryptographic integrity (hashes + block chaining)
-with basic monitoring (statistical + rule-based checks) on top of a blockchain-style ledger.
 
 
                 
