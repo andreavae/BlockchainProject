@@ -5,7 +5,7 @@ Python project that shows:
 - basic anomaly detection on blocks (z-scores + fixed security rules)
 
 Summary
-The scritp builds a small blockchain in memory
+The script builds a small blockchain in memory
 generates normal and anomalous blocks
 prints block features, anomaly detector output, and rule-based violations
 finally checks that the chain is still valid
